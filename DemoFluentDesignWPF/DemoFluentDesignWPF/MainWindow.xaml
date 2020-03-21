@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DemoFluentDesignWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-    <TextBlock>Fluent Design WPF</TextBlock>
+        Title="MainWindow" Height="450" Width="800"
+        xmlns:fw ="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
+        fw:AcrylicWindow.Enabled="True"
+        fw:AcrylicWindow.TitleBarMode="Extend">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="350"/>
+      <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+
+    <Grid Grid.Column="0" fw:PointerTracker.Enabled="True" Background="#01FFFFFF"></Grid>
+
+    <Grid Grid.Column="1" Background="White">
+
     </Grid>
+    
+  </Grid>
 </Window>
